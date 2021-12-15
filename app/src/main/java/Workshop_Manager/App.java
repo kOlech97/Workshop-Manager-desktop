@@ -4,11 +4,13 @@
 package Workshop_Manager;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+    
+    
+    
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        mainview m = new mainview();
+        m.setVisible(true);
+        
     }
 }

@@ -43,6 +43,7 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="chb_Start" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_SaveOrder" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="et_Phone" alignment="0" max="32767" attributes="0"/>
@@ -84,9 +85,11 @@
                   <Component id="et_Additional" min="-2" pref="92" max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="chb_Start" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btn_SaveOrder" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -133,6 +136,11 @@
     <Component class="javax.swing.JButton" name="btn_SaveOrder">
       <Properties>
         <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chb_Start">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Start now"/>
       </Properties>
     </Component>
   </SubComponents>

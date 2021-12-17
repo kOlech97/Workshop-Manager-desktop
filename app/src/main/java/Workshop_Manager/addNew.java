@@ -37,6 +37,7 @@ public class addNew extends javax.swing.JFrame {
         et_Additional = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         btn_SaveOrder = new javax.swing.JButton();
+        chb_Start = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -58,6 +59,8 @@ public class addNew extends javax.swing.JFrame {
 
         btn_SaveOrder.setText("Save");
 
+        chb_Start.setText("Start now");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,6 +80,7 @@ public class addNew extends javax.swing.JFrame {
                             .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chb_Start)
                     .addComponent(btn_SaveOrder)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(et_Phone)
@@ -109,9 +113,11 @@ public class addNew extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(et_Additional, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(39, 39, 39)
+                .addGap(11, 11, 11)
+                .addComponent(chb_Start)
+                .addGap(18, 18, 18)
                 .addComponent(btn_SaveOrder)
-                .addGap(50, 50, 50))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -158,6 +164,7 @@ public class addNew extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_SaveOrder;
+    private javax.swing.JCheckBox chb_Start;
     private javax.swing.JTextField et_Additional;
     private javax.swing.JTextField et_CarMake;
     private javax.swing.JTextField et_Name;

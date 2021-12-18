@@ -4,10 +4,26 @@ package Workshop_Manager;
 
 public abstract class Order {
     String customerName;
-    double phoneNumber;
+    String phoneNumber;
     String carMake;
     String problemDescription;
     String additionalInfo;
     boolean isActive;
+
+    public Order(String customerName, String phoneNumber, String carMake, String problemDescription, String additionalInfo, boolean isActive) {
+        this.customerName = customerName;
+        this.phoneNumber = phoneNumber;
+        this.carMake = carMake;
+        this.problemDescription = problemDescription;
+        this.additionalInfo = additionalInfo;
+        this.isActive = isActive;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" + "customerName=" + customerName + ", phoneNumber=" + phoneNumber + ", carMake=" + carMake + ", problemDescription=" + problemDescription + ", additionalInfo=" + additionalInfo + ", isActive=" + isActive + '}';
+    }
+
+ 
     
 }

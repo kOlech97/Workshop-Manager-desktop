@@ -2,7 +2,9 @@
 package Workshop_Manager;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -128,13 +130,20 @@ public class addNew extends javax.swing.JFrame {
 
     private void btn_SaveOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveOrderActionPerformed
             fileName=et_Name.getText();
-            file=new File(fileName+"txt");
+            file=new File(fileName+".txt");
             boolean fExists=file.exists();
-            FinishedOrder order = new FinishedOrder(0,0,0,0,0,"0","0", et_Name.getText().toString(), et_Phone.getText().toString(), et_CarMake.getText().toString(), et_ProblemDescription.getText().toString(), et_Additional.getText().toString(),true);
+            FinishedOrder order = new FinishedOrder(et_Name.getText().toString(), et_Phone.getText().toString(), et_CarMake.getText().toString(), et_ProblemDescription.getText().toString(), et_Additional.getText().toString(),true);
+            //Creating new object FinishedOrder
+        try {            
+            PrintWriter wrt = new PrintWriter(file);
+            wrt.print(order.toString());
+            wrt.close();
+        } catch (FileNotFoundException ex) {
             
+        }
             
-          //  FinishedOrder order = new FinishedOrder(et_Name.getText().toString(), et_Phone.getText().toString(), et_CarMake.getText().toString(), et_ProblemDescription.getText().toString(), et_Additional.getText().toString());
-            et_Name.setText(order.toString());
+          
+            
     }//GEN-LAST:event_btn_SaveOrderActionPerformed
 
     /**

@@ -22,7 +22,7 @@ public abstract class Order {
     @Override
     public String toString() {
         return "Order{" + "customerName=" + customerName + ", phoneNumber=" + phoneNumber + ", carMake=" + carMake + ", problemDescription=" + problemDescription + ", additionalInfo=" + additionalInfo + ", isActive=" + isActive + '}';
-    }
+    } //Overrided method toString() to save or show object as string type
 
  
     

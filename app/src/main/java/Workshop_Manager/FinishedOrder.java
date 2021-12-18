@@ -22,6 +22,15 @@ public class FinishedOrder extends Order {
         this.Parts = Parts;
     }
 
+
+    public FinishedOrder(String customerName, String phoneNumber, String carMake, String problemDescription, String additionalInfo, boolean isActive) {
+        super(customerName, phoneNumber, carMake, problemDescription, additionalInfo, isActive);
+    } //second constructor. Used to save data for 1. stage (abstract class)
+
+   
+            
+            
+
     public int getHour() {
         return hour;
     }

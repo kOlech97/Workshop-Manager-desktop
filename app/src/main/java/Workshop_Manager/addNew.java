@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class addNew extends javax.swing.JFrame {
     String fileName;
@@ -130,8 +131,13 @@ public class addNew extends javax.swing.JFrame {
 
     private void btn_SaveOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveOrderActionPerformed
             fileName=et_Name.getText();
-            file=new File(fileName+".txt");
-            boolean fExists=file.exists();
+            String path="logs\\"+fileName+".txt"; //saves in folder logs
+           
+   
+            file=new File(path);
+            
+            
+            
             FinishedOrder order = new FinishedOrder(et_Name.getText().toString(), et_Phone.getText().toString(), et_CarMake.getText().toString(), et_ProblemDescription.getText().toString(), et_Additional.getText().toString(),true);
             //Creating new object FinishedOrder
         try {            
@@ -139,6 +145,8 @@ public class addNew extends javax.swing.JFrame {
             wrt.print(order.toString());
             wrt.close();
         } catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null,"Error ");
+           
             
         }
             

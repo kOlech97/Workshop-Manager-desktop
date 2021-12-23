@@ -3,6 +3,8 @@
  */
 package Workshop_Manager;
 
+
+
 public class App {
     
     
@@ -12,5 +14,7 @@ public class App {
         mainview m = new mainview();
         m.setVisible(true);
         
+        
     }
+  
 }

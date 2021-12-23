@@ -1,1 +1,0 @@
-Order{customerName=rafak, phoneNumber=234421, carMake=21, problemDescription=fewq334, additionalInfo=65777, isActive=true}

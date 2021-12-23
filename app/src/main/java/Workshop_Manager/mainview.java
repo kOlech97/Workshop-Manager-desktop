@@ -15,12 +15,13 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.*; 
 
 
-public class mainview extends javax.swing.JFrame {
+public class mainview extends javax.swing.JFrame implements methodContainer{
     DefaultTableModel model;
 
     addNew addIt = new addNew();
     public mainview() {
         initComponents();
+        getData();
         
     }
 
@@ -104,6 +105,30 @@ public class mainview extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_addActionPerformed
 
     private void btn_RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RefreshActionPerformed
+     clearTab();   
+        getData();
+        
+    }//GEN-LAST:event_btn_RefreshActionPerformed
+
+    
+    public static void main(String args[]) {
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new mainview().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Refresh;
+    private javax.swing.JButton btn_add;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable tab_Orders;
+    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void getData() {
         model = (DefaultTableModel) tab_Orders.getModel();
         File files[] = new File("logs\\").listFiles();
         ArrayList<String> filenames = new ArrayList<String>();
@@ -131,23 +156,11 @@ public class mainview extends javax.swing.JFrame {
             Logger.getLogger(mainview.class.getName()).log(Level.SEVERE, null, ex);
         }
        }
-        
-    }//GEN-LAST:event_btn_RefreshActionPerformed
-
-    
-    public static void main(String args[]) {
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new mainview().setVisible(true);
-            }
-        });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Refresh;
-    private javax.swing.JButton btn_add;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tab_Orders;
-    // End of variables declaration//GEN-END:variables
+    @Override
+    public void clearTab() {
+        model = (DefaultTableModel) tab_Orders.getModel();
+        model.setRowCount(0);
+    }
 }

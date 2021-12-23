@@ -4,8 +4,13 @@
  */
 package Workshop_Manager;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*; 
 
@@ -106,7 +111,26 @@ public class mainview extends javax.swing.JFrame {
         {
             filenames.add(fl.getName());
         }
-        JOptionPane.showMessageDialog(null,filenames.get(1).toString());
+        //up to now, we have all the filenames from folder logs
+        for(int j=0;j<=files.length-1;j++)
+        {
+        String fpath="logs\\"+filenames.get(j); //selected for purpose
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fpath));
+            Object[] tablelines = br.lines().toArray();
+            for(int i=0;i<=tablelines.length-1;i++)
+            {
+                //String line[] = tablelines[i].toString().trim();
+               // lines = lines + tablelines[i];
+                String line = tablelines[i].toString();
+                String[] dataRow = line.split(",");
+                model.addRow(dataRow);
+            }
+           
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(mainview.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       }
         
     }//GEN-LAST:event_btn_RefreshActionPerformed
 

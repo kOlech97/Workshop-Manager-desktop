@@ -21,12 +21,12 @@ public abstract class Order {
 
     @Override
     public String toString() {
-        return customerName+"\n"
-                 + phoneNumber+"\n"
-                + carMake+"\n"
-                + problemDescription+"\n"
-                + additionalInfo+"\n"
-                + isActive+'\n';
+        return customerName+","
+                 + phoneNumber+","
+                + carMake+","
+                + problemDescription+","
+                + additionalInfo+","
+                + isActive+',';
     } //Overrided method toString() to save or show object as string type
 
  
